@@ -21,4 +21,16 @@ export class YesComponentComponent {
     thankyou for making my life so colorful and beautiful. I love you more than words can say.
     With all my love,
     yours Tushiii`;
+
+    private audio = new Audio();
+
+  ngOnInit(): void {
+    this.playSong();
+  }
+
+  playSong(): void {
+    this.audio.src = 'assets/song.mp3';  // Set the song path
+    this.audio.load();  // Load the audio file
+    this.audio.play().catch(error => console.error('Audio play failed', error));
+  }
 }
