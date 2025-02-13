@@ -1,0 +1,5 @@
+/* valentine-component.component.css */
+:host {
+  background-color: yellow !important;
+  display: block;
+}
